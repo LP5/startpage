@@ -55,7 +55,6 @@ html {
   */
   display: flex;
   flex-flow: row wrap;
-  align-items: stretch;
   justify-content: space-between;
   margin: auto 0;
   width: 100%;
