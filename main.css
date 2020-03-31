@@ -29,13 +29,16 @@ html {
 .center__time {
 	display: flex;
 	flex-flow: column nowrap;
+	margin: auto;
+	height: 100%;
+	width: 100%;
 }
 
 .center__clock {
 	color: var(--main-color);
 	font-family: inherit;
 	font-size: 2rem;
-	margin: auto 10px;
+	margin: 10% 5%;
 }
 
 .center__clock--timezone {

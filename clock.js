@@ -42,13 +42,12 @@ function KillClock() {
 }
 
 function GetIcon() {
-	var link = document.getElementById("bookmrks__link").URL;
-	var base = document.getElementById("bookmrks__link").origin;
-	var icon = base + "/favicon.ico";
-	var fin = document.getElementById("test__ico");
-	fin.src = icon;
-	alert(icon);
-	// alert(base);
+	var base = document.getElementsByClassName("bookmrks__link");
+	var fin = document.getElementsByClassName("bookmrks__ico");
+
+	for (i=0; i<base.length; i++) {
+		fin[i].src = base[i].origin +  "/favicon.ico";
+	}
 }
 
 window.onload = function() {
