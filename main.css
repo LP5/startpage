@@ -1,5 +1,6 @@
 :root {
   --main-color: #2C9EB3;
+	--scnd-color: #BF2CB8;
 }
 
 @font-face {
@@ -17,18 +18,39 @@ html {
 }
 
 .center {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
   text-align: center;
   margin: auto;
   width: 40vh;
 }
 
-.center img {
-  width: 100%;
+.center__time {
+	display: flex;
+	flex-flow: column nowrap;
 }
 
-/* | POSSIBLE SPINNING ANIMATION |
+.center__clock {
+	color: var(--main-color);
+	font-family: inherit;
+	font-size: 2rem;
+	margin: auto 10px;
+}
 
-.center img {
+.center__clock--timezone {
+	color: var(--scnd-color);
+}
+
+figure {
+	height: 200px;
+}
+
+figure img {
+	height: 100%;
+}
+
+/*.center img {
 		-webkit-animation: rotation 3s infinite linear;
 }
 
@@ -71,7 +93,7 @@ html {
 }
 
 .bookmrks__header {
-  color: #BF2CB8;
+  color: var(--scnd-color);
   font-size: 1em;
   margin: 0 auto 0.2em auto;
 }
@@ -79,6 +101,11 @@ html {
 .bookmrks__nav {
   display: flex;
   flex-flow: column;
+}
+
+.bookmrks_ico {
+	height: 0.9em;
+	margin-right: 0.2em;
 }
 
 .bookmrks__link {
