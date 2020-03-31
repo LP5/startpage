@@ -42,15 +42,17 @@ function KillClock() {
 }
 
 function GetIcon() {
-	var base = document.getElementById("bookmrks__link");
-	var test = base.getAttribute("href");
-  var testLocation = test;
-  alert(testLocation);
+	var link = document.getElementById("bookmrks__link").URL;
+	var base = document.getElementById("bookmrks__link").origin;
+	var icon = base + "/favicon.ico";
+	var fin = document.getElementById("test__ico");
+	fin.src = icon;
+	alert(icon);
+	// alert(base);
 }
 
 window.onload = function() {
   StartClock();
 	GetIcon();
 }
-
 
