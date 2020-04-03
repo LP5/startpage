@@ -1,33 +1,39 @@
 var clockID;
-var yourTimeZoneFrom = +5; //time zone value where you are at
-var moscowTimzeone = +3; //time zone value where you are at
+var homeTimezone = +5; //time zone value where you are at
+var moscowTimezone = +3; //time zone value of another place
 
 var d = new Date();
 //get the timezone offset from local time in minutes
-var tzDifference = yourTimeZoneFrom * 60 + d.getTimezoneOffset();
+var tzHomeDifference = homeTimezone * 60 + d.getTimezoneOffset();
+var tzMoscowDifference = moscowTimezone * 60 + d.getTimezoneOffset();
 //convert the offset to milliseconds, add to targetTime, and make a new Date
-var offset = tzDifference * 60 * 1000;
+var homeOffset = tzHomeDifference * 60 * 1000;
+var moscowOffset = tzMoscowDifference * 60 * 1000;
 
 function UpdateClock() {
-  var tDate = new Date(new Date().getTime() + offset);
-  var in_hours = tDate.getHours();
-  var in_minutes = tDate.getMinutes();
-  var in_seconds = tDate.getSeconds();
+  var tDateHome = new Date(new Date().getTime() + homeOffset);
+	var tDateMoscow = new Date(new Date().getTime() + moscowOffset);
+  var in_hours_home = tDateHome.getHours();
+	var in_hours_moscow = tDateMoscow.getHours();
+  var in_minutes = tDateHome.getMinutes();
+  var in_seconds = tDateHome.getSeconds();
 
   if (in_minutes < 10)
     in_minutes = '0' + in_minutes;
   if (in_seconds < 10)
     in_seconds = '0' + in_seconds;
-  if (in_hours < 10)
-    in_hours = '0' + in_hours;
+  if (in_hours_home < 10)
+    in_hours_home = '0' + in_hours_home;
+	if (in_hours_moscow < 10)
+		in_hours_moscow = '0' + in_hours_moscow;
 
   document.getElementById('clock--home').innerHTML = "" +
-    in_hours + ":" +
+    in_hours_home + ":" +
     in_minutes + ":" +
     in_seconds;
     
   document.getElementById('clock--Moscow').innerHTML = "" +
-    in_hours-2 + ":" +
+    in_hours_moscow + ":" +
     in_minutes + ":" +
     in_seconds;
 
@@ -46,9 +52,21 @@ function GetIcon() {
 	var fin = document.getElementsByClassName("bookmrks__ico");
 
 	for (i=0; i<base.length; i++) {
-		fin[i].src = base[i].origin +  "/favicon.ico";
+		var icon = base[i].origin + "/favicon.ico";
+		fin[i].setAttribute("src", icon);
+		fin[i].onerror = function() {
+			this.style.display = "none";
+		}
 	}
 }
+
+/* | 404 ICONS REMOVER |
+function remove() {
+	var ico =document.getElementsByClassName("bookmrks__ico");
+	for (i=0; i<ico.length; i++) {
+		ico[i].style.display = "none";
+	}
+} */
 
 window.onload = function() {
   StartClock();
