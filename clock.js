@@ -53,10 +53,10 @@ function GetIcon() {
 
 	for (i=0; i<base.length; i++) {
 		var icon = base[i].origin + "/favicon.ico";
-		fin[i].setAttribute("src", icon);
 		fin[i].onerror = function() {
 			this.style.display = "none";
 		}
+		fin[i].setAttribute("src", icon);
 	}
 }
 
@@ -72,5 +72,4 @@ window.onload = function() {
   StartClock();
 	GetIcon();
 }
-
 	
