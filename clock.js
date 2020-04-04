@@ -47,6 +47,12 @@ function KillClock() {
   clearTimeout(clockID);
 }
 
+function calc() {
+	var money = Number(document.getElementById("money").value);
+	var lessons = Number(document.getElementById("lessons").value * 350);
+	document.getElementById("total").value = money + lessons;
+}
+
 function GetIcon() {
 	var base = document.getElementsByClassName("bookmrks__link");
 	var fin = document.getElementsByClassName("bookmrks__ico");

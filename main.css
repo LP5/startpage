@@ -1,4 +1,5 @@
 :root {
+	--back-color: #031422;
 	--main-color: #2C9EB3;
 	--scnd-color: #BF2CB8;
 }
@@ -9,7 +10,7 @@
 }
 
 html {
-	background-color: #0A1A27;
+	background-color: var(--back-color);
 	color: var(--main-color);
 	display: block;
 	font-family: "VHS";
@@ -19,40 +20,64 @@ html {
 
 .center {
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	justify-content: space-around;
 	text-align: center;
 	margin: auto;
-	width: 40vh;
+	width: 100%;
 }
 
 .center__time {
 	display: flex;
 	flex-flow: column nowrap;
+	flex-grow: 1;
 	margin: auto;
-	height: 100%;
-	width: 100%;
 }
 
 .center__clock {
 	color: var(--main-color);
 	font-family: inherit;
 	font-size: 2rem;
-	margin: 10% 5%;
 }
 
 .center__clock--timezone {
 	color: var(--scnd-color);
 }
 
+.center__clock--time {
+	color: var(--main-color);
+}
+
 figure {
-	height: 200px;
+	flex-grow: 1;
+	margin: auto;
 }
 
-figure img {
-	height: 100%;
+.calc__container {
+	flex-grow: 1;
+	margin: auto;
 }
 
+.calc__form, .calc__table {
+	margin: auto;
+}
+
+.calc__row input {
+	background-color: rgba(0, 0, 0, 0.5);
+	border: 2px solid var(--main-color);
+	color: var(--main-color);
+	font-family: "VHS";
+	font-size: 1em;
+	font-weight: bold;
+	padding: 0.9em;
+	text-align: center;
+	transition: 0.2s;
+}
+
+.calc__row input:focus, input:hover {
+	border: 2px solid var(--scnd-color);
+	outline: none;
+}
 
 /*.center img {
 		-webkit-animation: rotation 3s infinite linear;
@@ -88,11 +113,12 @@ figure img {
 
 .bookmrks__container {
 	background-color: rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 0 2px var(--main-color);
 	display: flex;
 	flex: 1 0 auto;
 	flex-direction: column;
-	margin: 0.2em;
-	padding: 0.8em;
+	margin: 0.3em;
+	padding: 0.6em;
 	height: fit-content;
 }
 

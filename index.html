@@ -5,19 +5,36 @@
 <head>
     <title>Startpage</title>
     <link href="main.css" rel="stylesheet" type="text/css">
-    <link href="cntr.png" rel="icon">
+    <link href="favicon.ico" rel="icon">
 </head>
 
 <body>
     <section class="center">
-        <div class="center__time">
-            <span class="center__clock center__clock--timezone">GMT+5<span class="center__clock" id="clock--home">00:00:00</span></span>
-            <span class="center__clock center__clock--timezone">GMT+3<span class="center__clock" id="clock--Moscow">00:00:00</span></span>
-        </div>
-        <figure>
-            <img src="cntr.png">
-            <figcaption>WELCOME</figcaption>
-        </figure>
+			<div class="center__time">
+				<span class="center__clock center__clock--timezone">GMT+5 <span class="center__clock--time" id="clock--home">00:00:00</span></span>
+				<span class="center__clock center__clock--timezone">GMT+3 <span class="center__clock--time" id="clock--Moscow">00:00:00</span></span>
+			</div>
+			<figure>
+				<img src="cntr.png">
+			</figure>
+			<div class="calc__container">
+				<form class="calc__form">
+					<table class="calc__table">
+						<tr class="calc__row">
+							<td><input id="money" autocomplete="off" type="text" oninput="calc()"></td>
+							<th>MONEY</th>
+						</tr>
+						<tr class="calc__row">
+							<td><input id="lessons" autocomplete="off" type="text" oninput="calc()"></td>
+							<th>LESSONS</th>
+						</tr>
+						<tr class="calc__row">
+							<td><input id="total" autocomplete="off" disabled type="text" value="0" oninput="calc()"></td>
+							<th>TOTAL</th>
+						</tr>
+					</table>
+				<form>
+			</div>
     </section>
     <!-- | BOOKMARKS | -->
     <section class="bookmrks">
@@ -49,22 +66,19 @@
           <a href="https://www.reddit.com/" target="_blank" class="bookmrks__link"><img class="bookmrks__ico" src=" "/>reddit</a>
           <a href="http://twitter.com/" target="_blank" class="bookmrks__link"><img class="bookmrks__ico" src=" "/>twitter</a>
           <a href="http://vk.com/" target="_blank" class="bookmrks__link"><img class="bookmrks__ico" src=" "/>VKontakte</a>
-          <a href="#" target="_blank" class="bookmrks__link">link</a>
+          <a href="https://discordapp.com/channels/@me" target="_blank" class="bookmrks__link"><img class="bookmrks__ico" src=" "/>discord</a>
         </nav>
       </div>
       <div class="bookmrks__container">
         <h1 class="bookmrks__header">&#187;MISC</h1>
         <nav class="bookmrks__nav">
-          <a href="#" target="_blank" class="bookmrks__link">link</a>
-          <a href="#" target="_blank" class="bookmrks__link">link</a>
-          <a href="#" target="_blank" class="bookmrks__link">link</a>
-          <a href="#" target="_blank" class="bookmrks__link">link</a>
+          <a href="http://youtube.ru/" target="_blank" class="bookmrks__link"><img class="bookmrks__ico" src=" "/>YouTube</a>
+          <a href="https://www.deezer.com/us/" target="_blank" class="bookmrks__link"><img class="bookmrks__ico" src=" "/>Deezer</a>
+          <a href="#" target="_blank" class="bookmrks__link"><img class="bookmrks__ico" src=" "/>link</a>
+          <a href="#" target="_blank" class="bookmrks__link"><img class="bookmrks__ico" src=" "/>link</a>
 				</nav>
 			</div>
     </section>
-		<div class="bookmrks__container">
-			<button type="button" onclick="remove()">DELETE TAG</button>
-		</div>
     <script type="text/javascript" src="clock.js"></script>
 </body>
 
