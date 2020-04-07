@@ -145,4 +145,9 @@ figure {
 	width: fit-content;
 }
 
+.bookmrks__link:hover {
+	color: var(--scnd-color);
+	transition: 0.2s;
+}
+
 /* damn it */
