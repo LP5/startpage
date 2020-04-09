@@ -65,6 +65,7 @@ figure {
 .calc__row input {
 	background-color: rgba(0, 0, 0, 0.5);
 	border: 2px solid var(--main-color);
+	border-radius: 2px;
 	color: var(--main-color);
 	font-family: "VHS";
 	font-size: 1em;
@@ -113,6 +114,7 @@ figure {
 
 .bookmrks__container {
 	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 2px;
 	box-shadow: 0 0 0 2px var(--main-color);
 	display: flex;
 	flex: 1 0 auto;
