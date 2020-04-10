@@ -80,6 +80,10 @@ figure {
 	outline: none;
 }
 
+.calc__row th {
+	color: var(--scnd-color);
+}
+
 /*.center img {
 		-webkit-animation: rotation 3s infinite linear;
 }
