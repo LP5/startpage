@@ -149,12 +149,12 @@ figure {
 	color: var(--main-color);
 	text-decoration: none;
 	text-transform: uppercase;
+	transition: 0.2s;
 	width: max-content;
 }
 
 .bookmrks__link:hover {
 	color: var(--scnd-color);
-	transition: 0.2s;
 }
 
 /* damnit */
