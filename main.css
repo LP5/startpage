@@ -19,6 +19,20 @@ html {
 	width: 100%;
 }
 
+#search_form_input_homepage {
+	background: var(--main-color);
+	color: #222;
+	width: 100%;
+	display: block;
+	height: 39px;
+	padding: 4px 42px 5px 6px;
+	margin: 0;
+	outline: none;
+	border-right: 0;
+	border: 1px solid #8d8d8d;
+	font-size: 18px;
+}
+
 .center {
 	display: flex;
 	flex-flow: row wrap;
@@ -125,7 +139,7 @@ figure {
 	flex: 0 0 auto;
 	flex-direction: column;
 	margin: 0.4em;
-	padding: 0.6em;
+	padding: 0.5em;
 	height: max-content;
 }
 
