@@ -12,11 +12,16 @@
 html {
 	background-color: var(--back-color);
 	color: var(--main-color);
-	display: block;
+	display: flex;
+	flex-flow: column;
 	font-family: "VHS";
 	font-size: calc(0.8em + 0.8vh);
 	height: 100%;
 	width: 100%;
+}
+
+body {
+	margin: auto;
 }
 
 #search_form_input_homepage {
