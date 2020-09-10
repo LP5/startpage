@@ -54,11 +54,13 @@ function calc() {
 }
 
 function GetIcon() {
+
 	var base = document.getElementsByClassName("bookmrks__link");
 	var fin = document.getElementsByClassName("bookmrks__ico");
+	var googleIconGetter = "https://s2.googleusercontent.com/s2/favicons?domain_url="
 
 	for (i=0; i<base.length; i++) {
-		var icon = base[i].origin + "/favicon.ico";
+		var icon = googleIconGetter + base[i];
 		fin[i].onerror = function() {
 			this.style.display = "none";
 		}
@@ -66,17 +68,7 @@ function GetIcon() {
 	}
 }
 
-/* | 404 ICONS REMOVER |
-function remove() {
-	var ico =document.getElementsByClassName("bookmrks__ico");
-	for (i=0; i<ico.length; i++) {
-		ico[i].style.display = "none";
-	}
-} */
-
 window.onload = function() {
   StartClock();
 	GetIcon();
 }
-	
-/* work blyat */
