@@ -49,7 +49,7 @@ function KillClock() {
 
 function calc() {
 	var money = Number(document.getElementById("money").value);
-	var lessons = Number(document.getElementById("lessons").value * 350);
+	var lessons = Number(document.getElementById("lessons").value * 300);
 	document.getElementById("total").value = money + lessons;
 }
 
