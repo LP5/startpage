@@ -21,7 +21,7 @@ html {
 }
 
 body {
-	margin: auto;
+	margin: auto 0;
 }
 
 #search_form_input_homepage {
@@ -41,7 +41,7 @@ body {
 .center {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	text-align: center;
 	margin: auto;
 	width: 100%;
